@@ -1,0 +1,4 @@
+Destinacia: Chorvatsko, Cena: 528 eur, Plaz: 50m, Doprava: autobus
+Destinacia: Taliansko, Cena: 645 eur, Plaz: 20m, Doprava: autobus
+Destinacia: Francuzsko, Cena: 764 eur, Plaz: 100m, Doprava: lietadlo
+Destinacia: Spanielsko, Cena: 823 eur, Plaz: 10m, Doprava: lietadlo
