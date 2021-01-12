@@ -6,13 +6,14 @@ int main()
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
-	/*Zajazd zajazd((char*)"Taliansko", 645, 'A', 20);
-	zajazd.vypis();*/
-
 	CestovnaKancelaria tour((char*)"data.txt");
 	tour.zorad();
-	tour.vypis();
 	tour.exportuj();
+
+	printf("Zadajte vas cenovy strop: ");
+	int cena = 0;
+	scanf("%d", &cena);
+	tour.vypis(cena);
 
 	return 0;
 }

@@ -17,7 +17,7 @@ CestovnaKancelaria::CestovnaKancelaria(char* nazovSuboru)
 			int pocetRiadkov = 0;
 			string riadok;
 			while (getline(input, riadok)) pocetRiadkov++;
-			input.clear(); 
+			input.clear();
 			input.seekg(0); //nastavim kurzor opat na zaciatok suboru
 
 			pocetZajazdov = pocetRiadkov;
@@ -72,6 +72,18 @@ void CestovnaKancelaria::vypis()
 	}
 }
 
+void CestovnaKancelaria::vypis(int cena)
+{
+	printf("ZAJAZDY VYHOVUJUCE ZADANYM PODMIENKAM:\n");
+	for (int i = 0; i < pocetZajazdov; i++)
+	{
+		if (zoznam[i]->getCena() < cena)
+		{
+			zoznam[i]->vypis();
+		}
+	}
+}
+
 void CestovnaKancelaria::exportuj()
 {
 	ofstream output;
@@ -81,7 +93,7 @@ void CestovnaKancelaria::exportuj()
 		for (int i = 0; i < pocetZajazdov; i++)
 		{
 			output << "Destinacia: " << zoznam[i]->getDestinacia()
-				<< ", Cena: " << zoznam[i]->getCena() 
+				<< ", Cena: " << zoznam[i]->getCena()
 				<< " eur, Plaz: " << zoznam[i]->getPlaz()
 				<< "m, Doprava: ";
 			if (zoznam[i]->getDoprava() == 'A')

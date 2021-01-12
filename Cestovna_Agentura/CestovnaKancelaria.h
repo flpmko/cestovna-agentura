@@ -12,6 +12,7 @@ public:
 	void zorad();
 	void vymen(Zajazd& a, Zajazd& b);
 	void vypis();
+	void vypis(int cena);
 	void exportuj();
 	~CestovnaKancelaria();
 };
